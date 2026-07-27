@@ -14,7 +14,7 @@ export const TAGLINE = "Human Judgement. Machine Speed.";
  * set here, so adding LinkedIn later is a one-line change.
  */
 export const SOCIALS = {
-  instagram: null as string | null,
+  instagram: "https://www.instagram.com/lumiqtalent/" as string | null,
   linkedin: null as string | null,
 };
 
