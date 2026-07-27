@@ -34,6 +34,8 @@ export const VALUES = [
 export const SPECIALITIES = [
   {
     title: "AI & Machine Learning",
+    blurb:
+      "From research through to production, we place the people building and running AI systems that actually ship.",
     roles: [
       "Research Scientists & ML Engineers",
       "AI Engineers",
@@ -48,6 +50,8 @@ export const SPECIALITIES = [
   },
   {
     title: "Blockchain & Digital Assets",
+    blurb:
+      "Deep bench across protocol, infrastructure and compliance for teams building on-chain.",
     roles: [
       "Blockchain Engineers & Smart Contract Developers",
       "Software Engineers (Blockchain-focused)",
@@ -60,6 +64,8 @@ export const SPECIALITIES = [
   },
   {
     title: "Data & Analytics",
+    blurb:
+      "The full data stack, from governance and architecture through to the analysts turning it into decisions.",
     roles: [
       "Data Analysts",
       "Data Engineers",
