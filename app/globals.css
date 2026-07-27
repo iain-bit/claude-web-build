@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3ece0;
+  --foreground: #0f3028;
+
+  /* Lumiq brand palette */
+  --color-forest: #0f3028;
+  --color-moss: #1b4a3e;
+  --color-sage: #6f8f7c;
+  --color-sand: #ddd0b7;
+  --color-stone: #f3ece0;
+  --color-bronze: #b48b5a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-forest: var(--color-forest);
+  --color-moss: var(--color-moss);
+  --color-sage: var(--color-sage);
+  --color-sand: var(--color-sand);
+  --color-stone: var(--color-stone);
+  --color-bronze: var(--color-bronze);
+
+  --font-heading: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
