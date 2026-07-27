@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import SocialLinks from "./SocialLinks";
 import { NAV_ITEMS } from "@/lib/constants";
 
 export default function Footer() {
@@ -11,6 +12,7 @@ export default function Footer() {
           <p className="max-w-xs font-sans text-sm text-stone/70">
             Specialist talent advisory for AI, Data, Engineering and Blockchain.
           </p>
+          <SocialLinks />
         </div>
 
         <nav className="flex flex-wrap gap-x-8 gap-y-2">

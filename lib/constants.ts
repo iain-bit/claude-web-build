@@ -9,6 +9,15 @@ export const NAV_ITEMS = [
 
 export const TAGLINE = "Human Judgement. Machine Speed.";
 
+/**
+ * Left null until URLs exist — Footer only renders an icon once its URL is
+ * set here, so adding LinkedIn later is a one-line change.
+ */
+export const SOCIALS = {
+  instagram: null as string | null,
+  linkedin: null as string | null,
+};
+
 export const POSITIONING_STATEMENT =
   "Specialist talent advisory for AI, Data, Engineering and Blockchain. We use tools to move faster, but every judgement is made by a human, always. We dig deeper than the brief, challenge where it matters, and flex to how you want to work because getting it right beats getting it fast.";
 
