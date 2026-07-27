@@ -72,31 +72,42 @@ export const SPECIALITIES = [
   },
 ] as const;
 
+/**
+ * `linkedin` is left null until profile URLs are supplied — the About page
+ * only renders the LinkedIn link when one is present, so adding them later
+ * is a one-line change per person here.
+ */
 export const TEAM = [
   {
     name: "Jess",
     role: "Co-Founder",
+    email: "jess@lumiqtalent.com",
+    linkedin: null as string | null,
     bio: [
       "Jess is an award-winning tech entrepreneur who launched her first business at 16 and her second at 22, scaling it to 130 countries. She was later a grand finalist on China's hit entrepreneurship show The Next Unicorn (a cross between Shark Tank and The Apprentice). Her work sits at the intersection of technology, systems and leadership, helping organisations navigate what's next.",
       "She is the co-founder of Women Making Waves, a technology company advancing awareness around women's rights law reform. Jess has been recognised by Forbes as one of 1,000 entrepreneurs under 30 to change the world in the next 50 years and is a three-time member of SmartCompany's 30 Under 30.",
-      "Jess is also recently a contributor for Forbes Australia and a seasoned sought-after keynote speaker and MC. Jess has opened national tours for Tony Robbins and Tom Bilyeu, and has interviewed global icons on stage including Sir Richard Branson, Deepak Chopra, Robert Kiyosaki and All Blacks legend Dan Carter. She has delivered keynote presentations for Fortune 500 companies, high-growth startups, and organisations including Lenovo, KPMG, Airbnb, TikTok and Google to name a few.",
+      "Jess is also a recent contributor for Forbes Australia and a seasoned, sought-after keynote speaker and MC. She has opened national tours for Tony Robbins and Tom Bilyeu, and interviewed global icons on stage including Sir Richard Branson, Deepak Chopra, Robert Kiyosaki and All Blacks legend Dan Carter. She has delivered keynote presentations for Fortune 500 companies, high-growth startups, and organisations including Lenovo, KPMG, Airbnb, TikTok and Google.",
     ],
   },
   {
     name: "Iain",
     role: "Co-Founder",
+    email: "iain@lumiqtalent.com",
+    linkedin: null as string | null,
     bio: [
       "Iain brings close to two decades of recruitment experience, with more than 750 placements across the UK, EU, and Australia. He has a comprehensive understanding of the IT landscape, from legacy systems underpinning traditional finance to the latest blockchain and AI technologies. Known for his ability to engage passive talent, he designs tailored recruitment processes that balance thorough vetting with a high-quality candidate experience. He is a trusted recruitment partner to global fintechs, investment banks, law firms, Big 4 consultancies, and high-growth startups.",
-      "A key strength is his ability to solve the talent challenges others walk away from, whether that means navigating niche skill sets, hard-to-reach markets, or complex stakeholder environments.",
+      "A key strength is his ability to solve the talent challenges others walk away from — whether that means navigating niche skill sets, hard-to-reach markets, or complex stakeholder environments.",
       "Based in the Northern Illawarra, Iain enjoys trail running and making the most of the coastal lifestyle. A long-suffering Tottenham Hotspur supporter, he brings a sense of loyalty and perspective to both his work and personal life, and values spending time with his family above all.",
     ],
   },
   {
     name: "Matt",
     role: "Co-Founder",
+    email: "matt@lumiqtalent.com",
+    linkedin: null as string | null,
     bio: [
-      "Matt has 7 years of recruitment experience in the Sydney market, with more than 250 placements, specialising in Data and AI talent. He has recently built AI teams for the likes of PwC, Cushman & Wakefield and Macquarie Bank.",
-      "Known throughout the industry for exceptional levels of client and candidate care and in-depth knowledge of the AI market, Matt treats every placement as the start of a long-term relationship, not a transaction.",
+      "Matt has spent seven years building specialist recruitment expertise in the Sydney market, with more than 250 placements to his name and a focus on Data and AI talent. He works at the technical edge of the market, placing candidates who are shaping how organisations build, govern and scale their data and AI capability rather than filling generic headcount.",
+      "Recently, Matt has built out AI teams for organisations including PwC, Cushman & Wakefield and Macquarie Bank — work that demands a genuine grasp of the technical landscape, not just a list of keywords. He's known across the industry for the depth of his market knowledge and for the level of care he brings to both clients and candidates, treating every placement as a long-term relationship rather than a transaction.",
     ],
   },
 ] as const;
