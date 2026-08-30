@@ -26,19 +26,11 @@ export default function TeamCard({
           <PlaceholderAvatar name={member.name} index={index} />
         )}
         <div className="mt-4 flex items-center gap-4">
-          
-            href={`mailto:${member.email}`}
-            className="font-sans text-sm text-forest/70 underline decoration-sage/50 underline-offset-4 hover:text-forest"
-          >
+          <a href={`mailto:${member.email}`} className="font-sans text-sm text-forest/70 underline decoration-sage/50 underline-offset-4 hover:text-forest">
             Email
           </a>
           {member.linkedin && (
-            
-              href={member.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans text-sm text-forest/70 underline decoration-sage/50 underline-offset-4 hover:text-forest"
-            >
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-forest/70 underline decoration-sage/50 underline-offset-4 hover:text-forest">
               LinkedIn
             </a>
           )}
