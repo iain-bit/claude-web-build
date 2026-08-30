@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-forest text-stone">
       <Image
-        src="/hero-sydney.jpg"
-        alt="Sydney Harbour Bridge and Opera House skyline at night"
+        src="/hero-new.jpg"
+        alt="Abstract dark green and gold particle wave background"
         fill
         priority
         sizes="100vw"
