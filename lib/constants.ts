@@ -58,6 +58,22 @@ export const SPECIALITIES = [
     ],
   },
   {
+    title: "Data Centre & Infrastructure",
+    blurb:
+      "The physical foundation of the digital economy. From initial site acquisition to facility operations, we place the critical talent building both high-density colocation and hyperscaler environments.",
+    roles: [
+      "Real Estate & Site Acquisition Managers",
+      "Data Centre Design & Construction Leads",
+      "Critical Infrastructure Engineers (Power & Cooling)",
+      "Data Centre Facility Managers",
+      "Network & Infrastructure Architects",
+      "Hardware & Capacity Planning Engineers",
+      "Operations & Reliability Managers",
+      "Data Centre Security & Compliance Specialists",
+      "GPU & High-Performance Computing (HPC) Technicians",
+    ],
+  },
+  {
     title: "Blockchain & Digital Assets",
     blurb:
       "Deep bench across protocol, infrastructure and compliance for teams building on-chain.",
