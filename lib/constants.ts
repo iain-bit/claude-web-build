@@ -19,7 +19,7 @@ export const SOCIALS = {
 };
 
 export const POSITIONING_STATEMENT =
-  "Specialist talent advisory for AI, Data, Engineering and Blockchain. We use tools to move faster, but every judgement is made by a human, always. We dig deeper than the brief, challenge where it matters, and flex to how you want to work because getting it right beats getting it fast.";
+  "Specialist talent advisory for AI, Data, Engineering, Data Centre & Infrastructure, and Blockchain. We use tools to move faster, but every judgement is made by a human, always. We dig deeper than the brief, challenge where it matters, and flex to how you want to work because getting it right beats getting it fast.";
 
 export const VALUES = [
   {
