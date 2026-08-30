@@ -1,23 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
 
-/**
- * Typeset placeholder wordmark (brand bible specifies a custom four-point
- * star mark over the 'i' from approved master artwork). Swap for the real
- * logo file once available — this only approximates it in type.
- */
 export default function Logo({ dark = false }: { dark?: boolean }) {
-  const color = dark ? "text-stone" : "text-forest";
+  void dark;
 
   return (
-    <Link href="/" className={`font-heading text-2xl font-bold ${color} inline-flex items-baseline gap-0.5`}>
-      <span>Lum</span>
-      <span className="relative">
-        <span aria-hidden className="absolute -top-2.5 left-1/2 -translate-x-1/2 text-bronze text-xs">
-          ✦
-        </span>
-        i
-      </span>
-      <span>q</span>
+    <Link href="/" className="inline-flex items-center">
+      <Image
+        src="/lumiq-logo.png"
+        alt="Lumiq"
+        width={480}
+        height={191}
+        className="h-8 w-auto sm:h-9"
+        priority
+      />
     </Link>
   );
 }
