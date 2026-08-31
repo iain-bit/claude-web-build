@@ -46,11 +46,7 @@ export default function Candidates() {
       </div>
 
       <div className="mt-20">
-        <p className="font-sans text-xs uppercase tracking-wide text-forest/40">
-          Placeholder testimonials — to be replaced with real candidate
-          quotes
-        </p>
-        <div className="mt-4 grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2">
           {CANDIDATE_TESTIMONIALS.map((t) => (
             <TestimonialCard key={t.name} testimonial={t} />
           ))}
