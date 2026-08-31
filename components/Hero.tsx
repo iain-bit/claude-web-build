@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-forest text-stone">
       <Image
-        src="/hero-new.jpg"
+        src="/hero-new-v2.jpg"
         alt="Abstract dark green and gold particle wave background"
         fill
         priority
