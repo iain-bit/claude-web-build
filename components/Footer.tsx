@@ -10,7 +10,8 @@ export default function Footer() {
         <div className="space-y-3">
           <Logo dark />
           <p className="max-w-xs font-sans text-sm text-stone/70">
-            Specialist talent advisory for AI, Data, Engineering and Blockchain.
+            Specialist talent advisory for AI, Data, Engineering, Data Centre
+            &amp; Infrastructure, and Blockchain.
           </p>
           <SocialLinks />
         </div>
