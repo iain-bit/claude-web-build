@@ -55,7 +55,7 @@ export default function Home() {
           Specialities
         </h2>
         <p className="mt-4 max-w-2xl font-sans text-forest/70">
-          We know AI, Data, Software Engineering, and Blockchain properly, not
+          We know AI, Data, and Software Engineering properly, not
           superficially. Here&apos;s where we spend our time.
         </p>
 

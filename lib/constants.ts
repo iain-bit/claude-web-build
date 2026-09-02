@@ -19,7 +19,7 @@ export const SOCIALS = {
 };
 
 export const POSITIONING_STATEMENT =
-  "Specialist talent advisory for AI, Data, Engineering, Data Centre & Infrastructure, and Blockchain. We use tools to move faster, but every judgement is made by a human, always. We dig deeper than the brief, challenge where it matters, and flex to how you want to work because getting it right beats getting it fast.";
+  "Specialist talent advisory for AI, Data, Engineering, and Data Centre & Infrastructure. We use tools to move faster, but every judgement is made by a human, always. We dig deeper than the brief, challenge where it matters, and flex to how you want to work because getting it right beats getting it fast.";
 
 export const VALUES = [
   {
@@ -36,7 +36,7 @@ export const VALUES = [
   },
   {
     title: "Domain Knowledge",
-    body: 'We know AI, Data, Software Engineering, and Blockchain properly, not superficially. We have the runs on the board and years of experience to actually understand what "good" looks like in each vertical, so speed never comes at the cost of substance. Do it once and do it right.',
+    body: 'We know AI, Data, and Software Engineering properly, not superficially. We have the runs on the board and years of experience to actually understand what "good" looks like in each vertical, so speed never comes at the cost of substance. Do it once and do it right.',
   },
 ] as const;
 
@@ -71,20 +71,6 @@ export const SPECIALITIES = [
       "Operations & Reliability Managers",
       "Data Centre Security & Compliance Specialists",
       "GPU & High-Performance Computing (HPC) Technicians",
-    ],
-  },
-  {
-    title: "Blockchain & Digital Assets",
-    blurb:
-      "Deep bench across protocol, infrastructure and compliance for teams building on-chain.",
-    roles: [
-      "Blockchain Engineers & Smart Contract Developers",
-      "Software Engineers (Blockchain-focused)",
-      "Protocol & Infrastructure Engineers",
-      "RWA (Real-World Assets) Specialists",
-      "Digital Asset / Tokenisation Leads",
-      "Web3 Product Managers",
-      "Compliance & Regulatory (Digital Assets)",
     ],
   },
   {

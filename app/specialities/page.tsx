@@ -4,7 +4,7 @@ import { SPECIALITIES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Specialities | Lumiq Talent",
   description:
-    "Specialist talent advisory for AI & Machine Learning, Blockchain & Digital Assets, and Data & Analytics.",
+    "Specialist talent advisory for AI & Machine Learning, Data Centre & Infrastructure, and Data & Analytics.",
 };
 
 export default function Specialities() {
@@ -14,7 +14,7 @@ export default function Specialities() {
         Specialities
       </h1>
       <p className="mt-4 max-w-2xl font-sans text-forest/70">
-        We know AI, Data, Software Engineering, and Blockchain properly, not
+        We know AI, Data, and Software Engineering properly, not
         superficially. Here&apos;s where we spend our time.
       </p>
 
