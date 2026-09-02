@@ -162,7 +162,7 @@ export const PLACEHOLDER_TESTIMONIALS = [
     quote:
       "No pressure, no rushed decisions, just a recruiter who actually listened to where I wanted to go next.",
     name: "Tom",
-    role: "Blockchain Engineer",
+    role: "Data Engineer",
     context: "candidate" as const,
   },
 ] as const;

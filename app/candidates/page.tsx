@@ -6,7 +6,7 @@ import { PLACEHOLDER_TESTIMONIALS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Candidates | Lumiq Talent",
   description:
-    "Specialist career advice for AI, Data & Analytics, and Blockchain talent.",
+    "Specialist career advice for AI, Data & Analytics, and Engineering talent.",
 };
 
 const CANDIDATE_TESTIMONIALS = PLACEHOLDER_TESTIMONIALS.filter(
@@ -24,7 +24,7 @@ export default function Candidates() {
         chapter. At Lumiq, we take the time to understand where you&apos;ve
         been and where you want to go, matching you with roles and companies
         that are genuinely the right fit, not just the next opening. Backed
-        by deep specialisation in AI, Data &amp; Analytics, and Blockchain, we
+        by deep specialisation in AI, Data &amp; Analytics, and Engineering, we
         advise honestly, listen thoughtfully, and never rush a decision that
         matters this much.
       </p>
