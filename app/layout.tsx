@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Lumiq Talent | Human Judgement. Machine Speed.",
   description:
-    "Specialist talent advisory for AI, Data, Engineering and Blockchain.",
+    "Specialist talent advisory for AI, Data, Engineering and Data Centre & Infrastructure.",
 };
 
 export default function RootLayout({

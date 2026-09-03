@@ -6,7 +6,7 @@ import { PLACEHOLDER_TESTIMONIALS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Clients | Lumiq Talent",
   description:
-    "An end-to-end talent advisory for AI, Data & Analytics, and Blockchain hiring.",
+    "An end-to-end talent advisory for AI, Data & Analytics, and Engineering hiring.",
 };
 
 const CLIENT_TESTIMONIALS = PLACEHOLDER_TESTIMONIALS.filter(
@@ -24,7 +24,7 @@ export default function Clients() {
         recruiter. Whether you need a single traditional hire filled quickly
         or a fully embedded talent acquisition process built and run
         alongside your team, we tailor our offering to how you actually work.
-        Backed by deep specialism in AI, Data &amp; Analytics, and Blockchain,
+        Backed by deep specialism in AI, Data &amp; Analytics, and Engineering,
         we bring judgement, honesty, and flexibility to every engagement.
       </p>
 
