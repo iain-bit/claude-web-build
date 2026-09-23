@@ -15,7 +15,8 @@ auth, stores the file in Vercel Blob, and refreshes `/jobs` and
 
 Vercel setup:
 
-- Connect a Vercel Blob store to the project (adds `BLOB_READ_WRITE_TOKEN`).
+- Connect a private Vercel Blob store to the project (adds `BLOB_STORE_ID`;
+  auth is via Vercel OIDC).
 - Set `JOBADDER_FEED_USER` and `JOBADDER_FEED_PASSWORD` — the same details
   given to JobAdder support.
 

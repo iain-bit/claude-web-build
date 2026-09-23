@@ -28,8 +28,6 @@ export async function saveFeed(xml: string): Promise<void> {
  */
 export const getJobs = unstable_cache(
   async (): Promise<Job[] | null> => {
-    if (!process.env.BLOB_READ_WRITE_TOKEN) return null;
-
     try {
       const result = await get(FEED_PATHNAME, {
         access: "private",
