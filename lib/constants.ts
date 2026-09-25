@@ -7,6 +7,9 @@ export const NAV_ITEMS = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
+export const SITE_NAME = "Lumiq Talent";
+export const SITE_URL = "https://www.lumiqtalent.com";
+
 export const TAGLINE = "Human Judgement. Machine Speed.";
 
 /**
