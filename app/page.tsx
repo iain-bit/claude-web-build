@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import TeamCard from "@/components/TeamCard";
 import { VALUES, TEAM, SPECIALITIES } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
