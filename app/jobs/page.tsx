@@ -6,6 +6,7 @@ import { getJobs } from "@/lib/jobs";
 export const metadata: Metadata = {
   title: "Jobs | Lumiq Talent",
   description: "Current opportunities in AI, Data & Analytics, and Engineering.",
+  alternates: { canonical: "/jobs" },
 };
 
 export default async function Jobs() {

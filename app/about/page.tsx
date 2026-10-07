@@ -5,6 +5,7 @@ import { TEAM } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About | Lumiq Talent",
   description: "Meet the co-founders behind Lumiq Talent.",
+  alternates: { canonical: "/about" },
 };
 
 export default function About() {

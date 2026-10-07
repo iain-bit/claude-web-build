@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Candidates | Lumiq Talent",
   description:
     "Specialist career advice for AI, Data & Analytics, and Engineering talent.",
+  alternates: { canonical: "/candidates" },
 };
 
 const CANDIDATE_TESTIMONIALS = PLACEHOLDER_TESTIMONIALS.filter(

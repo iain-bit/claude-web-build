@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Specialities | Lumiq Talent",
   description:
     "Specialist talent advisory for AI & Machine Learning, Data Centre & Infrastructure, and Data & Analytics.",
+  alternates: { canonical: "/specialities" },
 };
 
 export default function Specialities() {

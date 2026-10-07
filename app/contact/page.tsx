@@ -4,6 +4,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 export const metadata: Metadata = {
   title: "Contact | Lumiq Talent",
   description: "Get in touch with Lumiq Talent.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function Contact() {

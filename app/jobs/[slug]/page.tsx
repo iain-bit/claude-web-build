@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JobMeta } from "@/components/JobBoard";
 import type { Job } from "@/lib/jobadder";
+import { SITE_URL } from "@/lib/constants";
 import { getJob } from "@/lib/jobs";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -13,6 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${job.title} | Lumiq Talent`,
     description: job.summary ?? undefined,
+    alternates: { canonical: `/jobs/${job.slug}` },
   };
 }
 
@@ -94,7 +96,7 @@ function jobPostingJsonLd(job: Job): string {
     hiringOrganization: {
       "@type": "Organization",
       name: "Lumiq Talent",
-      sameAs: "https://www.lumiqtalent.com",
+      sameAs: SITE_URL,
     },
     jobLocation: job.location
       ? {

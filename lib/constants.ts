@@ -8,7 +8,11 @@ export const NAV_ITEMS = [
 ] as const;
 
 export const SITE_NAME = "Lumiq Talent";
-export const SITE_URL = "https://www.lumiqtalent.com";
+/**
+ * The site's one canonical address. Vercel redirects www to this, so it
+ * must stay the bare domain or Google sees every sitemap URL as a redirect.
+ */
+export const SITE_URL = "https://lumiqtalent.com";
 
 export const TAGLINE = "Human Judgement. Machine Speed.";
 
