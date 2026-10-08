@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 /**
  * Shared enquiry form for Clients/Candidates/Contact, all pointing at one
@@ -114,6 +115,14 @@ export default function EnquiryForm({
           className="mt-1 w-full rounded-lg border border-sage/30 bg-white/70 px-4 py-3 font-sans text-sm text-forest outline-none focus:border-bronze"
         />
       </div>
+
+      <p className="font-sans text-xs text-forest/60">
+        We&apos;ll use your details to respond to your enquiry. See our{" "}
+        <Link href="/privacy" className="underline decoration-sage/50 underline-offset-4 hover:text-forest">
+          Privacy Policy
+        </Link>
+        .
+      </p>
 
       {status === "error" && (
         <p className="font-sans text-sm text-red-700">

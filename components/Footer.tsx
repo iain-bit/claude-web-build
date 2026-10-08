@@ -30,6 +30,10 @@ export default function Footer() {
       </div>
       <div className="border-t border-stone/10 px-6 py-6 text-center font-sans text-xs text-stone/50">
         © {new Date().getFullYear()} Lumiq Talent. All rights reserved.
+        <span className="mx-2">·</span>
+        <Link href="/privacy" className="hover:text-stone">
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );

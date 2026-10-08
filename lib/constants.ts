@@ -8,6 +8,8 @@ export const NAV_ITEMS = [
 ] as const;
 
 export const SITE_NAME = "Lumiq Talent";
+export const LEGAL_NAME = "Lumiq Talent Pty Ltd";
+export const PRIVACY_EMAIL = "iain@lumiqtalent.com";
 /**
  * The site's one canonical address. Vercel redirects www to this, so it
  * must stay the bare domain or Google sees every sitemap URL as a redirect.
@@ -118,7 +120,7 @@ export const TEAM = [
     name: "Iain",
     role: "Co-Founder",
     email: "iain@lumiqtalent.com",
-    linkedin: "https://www.linkedin.com/company/143590162/" as string | null,
+    linkedin: "https://www.linkedin.com/in/iainblackburn/" as string | null,
     photo: "/team-iain.jpg" as string | null,
     bio: [
       "Iain brings close to two decades of recruitment experience, with more than 750 placements across the UK, EU, and Australia. He has a comprehensive understanding of the IT landscape, from legacy systems underpinning traditional finance to the latest blockchain and AI technologies. Known for his ability to engage passive talent, he designs tailored recruitment processes that balance thorough vetting with a high-quality candidate experience. He is a trusted recruitment partner to global fintechs, investment banks, law firms, Big 4 consultancies, and high-growth startups.",
@@ -130,7 +132,7 @@ export const TEAM = [
     name: "Matt",
     role: "Co-Founder",
     email: "matt@lumiqtalent.com",
-    linkedin: "https://www.linkedin.com/company/143590162/" as string | null,
+    linkedin: "https://www.linkedin.com/in/matt-murphy-875a66146/" as string | null,
     photo: "/team-matt.jpg" as string | null,
     bio: [
       "Matt has spent seven years building specialist recruitment expertise in the Sydney market, with more than 250 placements to his name and a focus on Data and AI talent. He works at the technical edge of the market, placing candidates who are shaping how organisations build, govern and scale their data and AI capability rather than filling generic headcount.",
