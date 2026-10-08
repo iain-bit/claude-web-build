@@ -29,6 +29,21 @@ export default function Clients() {
         we bring judgement, honesty, and flexibility to every engagement.
       </p>
 
+      <section className="mt-16 max-w-3xl">
+        <h2 className="font-heading text-2xl font-bold text-forest sm:text-3xl">
+          Video job adverts
+        </h2>
+        <p className="mt-4 font-sans text-forest/80">
+          The best candidates usually aren&apos;t scrolling job boards. For
+          the roles we work on, we create short video job adverts that bring
+          the opportunity to life: what the role really involves, who the
+          team are, and why it&apos;s worth a conversation. We share them
+          across LinkedIn and our networks to reach passive talent, and they
+          help the right people put their hand up while the wrong ones
+          self-select out.
+        </p>
+      </section>
+
       <div className="mt-16 max-w-xl rounded-2xl bg-white/60 p-8">
         <h2 className="font-heading text-2xl font-bold text-forest">
           Tell us what you need
