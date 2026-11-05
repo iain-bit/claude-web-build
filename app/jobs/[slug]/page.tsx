@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JobMeta } from "@/components/JobBoard";
 import type { Job } from "@/lib/jobadder";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { getJob } from "@/lib/jobs";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -11,10 +11,29 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const job = await getJob((await params).slug);
   if (!job) return { title: "Job not found | Lumiq Talent" };
+  const title = `${job.title} | Lumiq Talent`;
+  const description = job.summary ?? undefined;
   return {
-    title: `${job.title} | Lumiq Talent`,
-    description: job.summary ?? undefined,
+    title,
+    description,
     alternates: { canonical: `/jobs/${job.slug}` },
+    // What LinkedIn, Slack etc. show when the link is shared. The preview
+    // image comes from opengraph-image.tsx next to this file. Setting
+    // openGraph here replaces the one in the root layout, so siteName and
+    // locale are repeated.
+    openGraph: {
+      title,
+      description,
+      url: `/jobs/${job.slug}`,
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "en_AU",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
