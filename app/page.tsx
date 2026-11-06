@@ -5,6 +5,17 @@ import { VALUES, TEAM, SPECIALITIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
+  // Only the homepage sets its own share title, so other pages fall back to
+  // their page title rather than inheriting this one.
+  openGraph: {
+    title: "AI, Data & Data Centre Recruitment Sydney | Lumiq Talent",
+    description:
+      "Sydney-based specialist recruiter for AI, data, engineering and data centre talent. Human Judgement. Machine Speed.",
+    url: "/",
+    siteName: "Lumiq Talent",
+    type: "website",
+    locale: "en_AU",
+  },
 };
 
 export default function Home() {

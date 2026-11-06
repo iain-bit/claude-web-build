@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JobMeta } from "@/components/JobBoard";
-import type { Job } from "@/lib/jobadder";
-import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { SITE_NAME } from "@/lib/constants";
 import { getJob } from "@/lib/jobs";
+import { jobMetaDescription, jobPageTitle, jobPostingJsonLd } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const job = await getJob((await params).slug);
   if (!job) return { title: "Job not found | Lumiq Talent" };
-  const title = `${job.title} | Lumiq Talent`;
-  const description = job.summary ?? undefined;
+  const title = jobPageTitle(job);
+  const description = jobMetaDescription(job);
   return {
     title,
     description,
@@ -99,34 +99,4 @@ export default async function JobPage({ params }: Props) {
       />
     </div>
   );
-}
-
-/** Structured data so the role can appear in Google's job search. */
-function jobPostingJsonLd(job: Job): string {
-  const data = {
-    "@context": "https://schema.org",
-    "@type": "JobPosting",
-    title: job.title,
-    description: job.descriptionHtml || job.summary || job.title,
-    datePosted: job.datePosted ?? undefined,
-    identifier: job.reference
-      ? { "@type": "PropertyValue", name: "Lumiq Talent", value: job.reference }
-      : undefined,
-    hiringOrganization: {
-      "@type": "Organization",
-      name: "Lumiq Talent",
-      sameAs: SITE_URL,
-    },
-    jobLocation: job.location
-      ? {
-          "@type": "Place",
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: job.location,
-          },
-        }
-      : undefined,
-  };
-  // Escape "<" so description HTML can't close the script tag.
-  return JSON.stringify(data).replace(/</g, "\\u003c");
 }

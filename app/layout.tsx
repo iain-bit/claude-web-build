@@ -3,10 +3,13 @@ import { Playfair_Display, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
+  FOUNDERS,
+  LEGAL_NAME,
   POSITIONING_STATEMENT,
   SITE_NAME,
   SITE_URL,
   SOCIALS,
+  TAGLINE,
 } from "@/lib/constants";
 import "./globals.css";
 
@@ -22,9 +25,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Lumiq Talent | Human Judgement. Machine Speed.",
+  title: "AI, Data & Data Centre Recruitment Sydney | Lumiq Talent",
   description:
-    "Specialist talent advisory for AI, Data, Engineering and Data Centre & Infrastructure.",
+    "Sydney-based specialist recruiter for AI, data, engineering and data centre talent. Human Judgement. Machine Speed.",
   applicationName: SITE_NAME,
   openGraph: {
     siteName: SITE_NAME,
@@ -34,25 +37,50 @@ export const metadata: Metadata = {
 };
 
 /**
- * Tells Google the site's name is "Lumiq Talent" (shown above search
- * results instead of the bare domain) and links the site to the
- * company's social profiles.
+ * Tells Google and AI assistants who Lumiq Talent is: the site's name
+ * (shown above search results instead of the bare domain), what kind of
+ * business it is, where it's based, who founded it, and its social profiles.
  */
 const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
     alternateName: ["LumiqTalent", "lumiqtalent.com"],
     url: `${SITE_URL}/`,
+    publisher: { "@id": `${SITE_URL}/#org` },
   },
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "EmploymentAgency",
+    "@id": `${SITE_URL}/#org`,
     name: SITE_NAME,
+    legalName: LEGAL_NAME,
     url: `${SITE_URL}/`,
     logo: `${SITE_URL}/lumiq-logo-green.png`,
+    image: `${SITE_URL}/lumiq-logo-green.png`,
+    slogan: TAGLINE,
     description: POSITIONING_STATEMENT,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Sydney",
+      addressRegion: "NSW",
+      addressCountry: "AU",
+    },
+    areaServed: { "@type": "Country", name: "Australia" },
+    knowsAbout: [
+      "AI and machine learning recruitment",
+      "Data and analytics recruitment",
+      "Data centre and infrastructure recruitment",
+      "Software engineering recruitment",
+    ],
+    founder: FOUNDERS.map((f) => ({
+      "@type": "Person",
+      name: f.fullName,
+      jobTitle: "Co-Founder",
+      ...(f.sameAs.length ? { sameAs: f.sameAs } : {}),
+    })),
     sameAs: Object.values(SOCIALS).filter(Boolean),
   },
 ];

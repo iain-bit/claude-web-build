@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
 import EnquiryForm from "@/components/EnquiryForm";
-import TestimonialCard from "@/components/TestimonialCard";
-import { PLACEHOLDER_TESTIMONIALS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Candidates | Lumiq Talent",
+  title: "AI, Data & Data Centre Careers | Lumiq Talent",
   description:
-    "Specialist career advice for AI, Data & Analytics, and Engineering talent.",
+    "Career advice and roles for AI, machine learning, data and data centre professionals in Australia, from specialist recruiters who listen.",
   alternates: { canonical: "/candidates" },
 };
-
-const CANDIDATE_TESTIMONIALS = PLACEHOLDER_TESTIMONIALS.filter(
-  (t) => t.context === "candidate"
-);
 
 export default function Candidates() {
   return (
@@ -43,14 +37,6 @@ export default function Candidates() {
             source="candidates"
             enquiryLabel="What are you looking for next?"
           />
-        </div>
-      </div>
-
-      <div className="mt-20">
-        <div className="grid gap-6 sm:grid-cols-2">
-          {CANDIDATE_TESTIMONIALS.map((t) => (
-            <TestimonialCard key={t.name} testimonial={t} />
-          ))}
         </div>
       </div>
     </div>

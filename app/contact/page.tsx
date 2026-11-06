@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Lumiq Talent",
-  description: "Get in touch with Lumiq Talent.",
+  title: "Contact Lumiq Talent | Sydney Tech Recruitment",
+  description:
+    "Get in touch with Lumiq Talent about hiring AI, data, engineering or data centre talent, or about your next role.",
   alternates: { canonical: "/contact" },
 };
 
