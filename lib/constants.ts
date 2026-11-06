@@ -42,7 +42,7 @@ export const FOUNDERS = [
  * Google Analytics 4 measurement ID (starts "G-"). Analytics and the
  * enquiry/email-click tracking stay off until this is set.
  */
-export const GA_MEASUREMENT_ID: string | null = null;
+export const GA_MEASUREMENT_ID: string | null = "G-6X00DVDCED";
 
 export const TAGLINE = "Human Judgement. Machine Speed.";
 
