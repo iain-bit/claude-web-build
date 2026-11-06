@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const LAST_UPDATED = "8 October 2026";
+const LAST_UPDATED = "6 November 2026";
 
 const SECTIONS: { heading: string; body: React.ReactNode }[] = [
   {
@@ -108,8 +108,8 @@ const SECTIONS: { heading: string; body: React.ReactNode }[] = [
           <li>
             <strong>Service providers</strong> who help us run our business,
             such as our recruitment software (JobAdder), website hosting
-            (Vercel), form handling (Formspree) and email (Google
-            Workspace). They may only use your information to provide their
+            (Vercel), form handling (Formspree), website analytics (Google
+            Analytics) and email (Google Workspace). They may only use your information to provide their
             services to us; and
           </li>
           <li>
@@ -147,12 +147,38 @@ const SECTIONS: { heading: string; body: React.ReactNode }[] = [
   {
     heading: "Cookies and analytics",
     body: (
-      <p>
-        This website does not use advertising or tracking cookies. Our
-        hosting provider may record standard technical information, such as
-        your IP address and browser type, to keep the site secure and
-        working.
-      </p>
+      <>
+        <p>
+          We use Google Analytics to understand how people find and use this
+          website, for example which pages are visited, roughly where
+          visitors are located (to city level), and whether they arrived
+          from a search engine, an AI tool, LinkedIn or elsewhere. Google
+          Analytics uses cookies and collects information such as your
+          browser and device type and a shortened version of your IP
+          address. It does not tell us who you are, and we do not use it
+          for advertising.
+        </p>
+        <p>
+          When you send an enquiry form or click one of our email links, we
+          record that it happened and how you told us you heard about us, so
+          we can see which channels are working. The content of your
+          enquiry is not sent to Google Analytics.
+        </p>
+        <p>
+          You can block analytics cookies in your browser settings, or opt
+          out of Google Analytics on all websites with Google&apos;s{" "}
+          <a
+            href="https://tools.google.com/dlpage/gaoptout"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            opt-out browser add-on
+          </a>
+          . Our hosting provider may also record standard technical
+          information, such as your IP address and browser type, to keep the
+          site secure and working.
+        </p>
+      </>
     ),
   },
   {

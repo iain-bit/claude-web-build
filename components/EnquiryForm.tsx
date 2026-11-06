@@ -2,6 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { trackEvent } from "@/components/Analytics";
+
+const HEARD_FROM = [
+  "Google search",
+  "AI tool (ChatGPT, Claude, Gemini, Perplexity etc.)",
+  "LinkedIn",
+  "X (Twitter)",
+  "Referral or word of mouth",
+  "Event",
+  "Other",
+] as const;
 
 /**
  * Shared enquiry form for Clients/Candidates/Contact, all pointing at one
@@ -41,6 +52,10 @@ export default function EnquiryForm({
       });
 
       if (res.ok) {
+        trackEvent("generate_lead", {
+          form: source,
+          heard_from: String(data.get("heard_from") ?? ""),
+        });
         setStatus("success");
         form.reset();
       } else {
@@ -64,6 +79,16 @@ export default function EnquiryForm({
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <input type="hidden" name="source" value={source} />
+      {/* Spam trap: hidden from people, filled in by bots. Formspree rejects
+          any submission where it has a value. */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="font-sans text-sm text-forest/80">
@@ -114,6 +139,28 @@ export default function EnquiryForm({
           required
           className="mt-1 w-full rounded-lg border border-sage/30 bg-white/70 px-4 py-3 font-sans text-sm text-forest outline-none focus:border-bronze"
         />
+      </div>
+
+      <div>
+        <label htmlFor="heard_from" className="font-sans text-sm text-forest/80">
+          How did you hear about us?
+        </label>
+        <select
+          id="heard_from"
+          name="heard_from"
+          required
+          defaultValue=""
+          className="mt-1 w-full rounded-lg border border-sage/30 bg-white/70 px-4 py-3 font-sans text-sm text-forest outline-none focus:border-bronze"
+        >
+          <option value="" disabled>
+            Please choose
+          </option>
+          {HEARD_FROM.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
       </div>
 
       <p className="font-sans text-xs text-forest/60">
