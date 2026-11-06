@@ -21,7 +21,13 @@ export const SITE_URL = "https://lumiqtalent.com";
  * assistants). The site itself shows first names only.
  */
 export const FOUNDERS = [
-  { fullName: "Jess Wilson", sameAs: ["https://jessicawilson.io/"] },
+  {
+    fullName: "Jess Wilson",
+    sameAs: [
+      "https://www.linkedin.com/in/jessica-wilson-55953483/",
+      "https://jessicawilson.io/",
+    ],
+  },
   {
     fullName: "Iain Blackburn",
     sameAs: ["https://www.linkedin.com/in/iainblackburn/"],
@@ -124,7 +130,7 @@ export const TEAM = [
     name: "Jess",
     role: "Co-Founder",
     email: "jess@lumiqtalent.com",
-    linkedin: "https://www.linkedin.com/company/143590162/" as string | null,
+    linkedin: "https://www.linkedin.com/in/jessica-wilson-55953483/" as string | null,
     photo: "/team-jess.jpg" as string | null,
     bio: [
       "Jess is an award-winning tech entrepreneur who launched her first business at 16 and her second at 22, scaling it to 130 countries. She was later a grand finalist on China's hit entrepreneurship show The Next Unicorn (a cross between Shark Tank and The Apprentice). Her work sits at the intersection of technology, systems and leadership, helping organisations navigate what's next.",
