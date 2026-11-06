@@ -14,14 +14,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     })),
     { url: `${SITE_URL}/privacy`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE_URL}/llms.txt`, changeFrequency: "weekly", priority: 0.3 },
   ];
 
   const jobs = (await getJobs()) ?? [];
   const jobPages: MetadataRoute.Sitemap = jobs.map((job) => ({
     url: `${SITE_URL}/jobs/${job.slug}`,
+    lastModified: validDate(job.dateUpdated ?? job.datePosted),
     changeFrequency: "weekly",
     priority: 0.6,
   }));
 
   return [...pages, ...jobPages];
+}
+
+function validDate(value: string | null): Date | undefined {
+  if (!value) return undefined;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? undefined : date;
 }

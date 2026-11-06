@@ -4,8 +4,9 @@ import JobBoard from "@/components/JobBoard";
 import { getJobs } from "@/lib/jobs";
 
 export const metadata: Metadata = {
-  title: "Jobs | Lumiq Talent",
-  description: "Current opportunities in AI, Data & Analytics, and Engineering.",
+  title: "AI, Data & Data Centre Jobs in Australia | Lumiq Talent",
+  description:
+    "Current AI & machine learning, data & analytics and data centre & infrastructure jobs in Australia, from Lumiq Talent.",
   alternates: { canonical: "/jobs" },
 };
 

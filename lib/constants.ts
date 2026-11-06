@@ -16,6 +16,28 @@ export const PRIVACY_EMAIL = "iain@lumiqtalent.com";
  */
 export const SITE_URL = "https://lumiqtalent.com";
 
+/**
+ * Full names and profile links for structured data (search engines and AI
+ * assistants). The site itself shows first names only.
+ */
+export const FOUNDERS = [
+  {
+    fullName: "Jess Wilson",
+    sameAs: [
+      "https://www.linkedin.com/in/jessica-wilson-55953483/",
+      "https://jessicawilson.io/",
+    ],
+  },
+  {
+    fullName: "Iain Blackburn",
+    sameAs: ["https://www.linkedin.com/in/iainblackburn/"],
+  },
+  {
+    fullName: "Matt Murphy",
+    sameAs: ["https://www.linkedin.com/in/matt-murphy-875a66146/"],
+  },
+] as const;
+
 export const TAGLINE = "Human Judgement. Machine Speed.";
 
 /**
@@ -108,7 +130,7 @@ export const TEAM = [
     name: "Jess",
     role: "Co-Founder",
     email: "jess@lumiqtalent.com",
-    linkedin: "https://www.linkedin.com/company/143590162/" as string | null,
+    linkedin: "https://www.linkedin.com/in/jessica-wilson-55953483/" as string | null,
     photo: "/team-jess.jpg" as string | null,
     bio: [
       "Jess is an award-winning tech entrepreneur who launched her first business at 16 and her second at 22, scaling it to 130 countries. She was later a grand finalist on China's hit entrepreneurship show The Next Unicorn (a cross between Shark Tank and The Apprentice). Her work sits at the intersection of technology, systems and leadership, helping organisations navigate what's next.",
@@ -138,40 +160,5 @@ export const TEAM = [
       "Matt has spent seven years building specialist recruitment expertise in the Sydney market, with more than 250 placements to his name and a focus on Data and AI talent. He works at the technical edge of the market, placing candidates who are shaping how organisations build, govern and scale their data and AI capability rather than filling generic headcount.",
       "Recently, Matt has built out AI teams for organisations including PwC, Cushman & Wakefield and Macquarie Bank — work that demands a genuine grasp of the technical landscape, not just a list of keywords. He's known across the industry for the depth of his market knowledge and for the level of care he brings to both clients and candidates, treating every placement as a long-term relationship rather than a transaction.",
     ],
-  },
-] as const;
-
-/**
- * Placeholder testimonials — invented for layout purposes only.
- * Must be replaced with real client/candidate quotes before launch.
- */
-export const PLACEHOLDER_TESTIMONIALS = [
-  {
-    quote:
-      "Lumiq didn't just fill a role, they understood our team and found someone who actually fit how we work.",
-    name: "Sarah",
-    role: "Head of Data, Series B FinTech",
-    context: "client" as const,
-  },
-  {
-    quote:
-      "They took the time to understand what I actually wanted from my next move, not just the next opening on their books.",
-    name: "James",
-    role: "Senior ML Engineer",
-    context: "candidate" as const,
-  },
-  {
-    quote:
-      "Honest, fast, and genuinely specialised in AI hiring. That combination is rare.",
-    name: "Priya",
-    role: "CTO, Series A AI Startup",
-    context: "client" as const,
-  },
-  {
-    quote:
-      "No pressure, no rushed decisions, just a recruiter who actually listened to where I wanted to go next.",
-    name: "Tom",
-    role: "Data Engineer",
-    context: "candidate" as const,
   },
 ] as const;

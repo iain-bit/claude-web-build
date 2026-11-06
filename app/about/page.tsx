@@ -3,8 +3,9 @@ import TeamCard from "@/components/TeamCard";
 import { TEAM } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About | Lumiq Talent",
-  description: "Meet the co-founders behind Lumiq Talent.",
+  title: "About Lumiq Talent | Specialist Tech Recruiters, Sydney",
+  description:
+    "Meet the three co-founders of Lumiq Talent, a Sydney-based specialist recruiter for AI, data, engineering and data centre talent.",
   alternates: { canonical: "/about" },
 };
 

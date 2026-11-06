@@ -32,8 +32,20 @@ export type Job = {
   area: string | null;
   workType: string | null;
   salary: string | null;
+  /** Structured pay for Google's job search, only when the feed has numbers. */
+  salaryRange: SalaryRange | null;
+  country: string | null;
   datePosted: string | null;
+  dateUpdated: string | null;
   applyUrl: string | null;
+};
+
+export type SalaryRange = {
+  min: number | null;
+  max: number | null;
+  currency: string;
+  /** JobAdder's period, e.g. "Annual", "Hourly", "Daily". */
+  period: string | null;
 };
 
 type XmlNode = Record<string, unknown>;
@@ -105,7 +117,10 @@ function toJob(node: XmlNode): Job | null {
     area: classifications.get("area") ?? null,
     workType: classifications.get("worktype") ?? null,
     salary: salaryText(pick(node, "Salary")),
+    salaryRange: salaryRange(pick(node, "Salary")),
+    country: classifications.get("country") ?? null,
     datePosted: text(pick(node, "@_datePosted")),
+    dateUpdated: text(pick(node, "@_dateUpdated")),
     applyUrl: safeUrl(text(pick(pick(node, "Apply"), "Url"))),
   };
 }
@@ -120,6 +135,23 @@ function salaryText(node: unknown): string | null {
   const range = min && max && min !== max ? `${min} – ${max}` : (min ?? max);
   const period = text(pick(node, "@_period"));
   return period ? `${range} ${period.toLowerCase()}` : range;
+}
+
+function salaryRange(node: unknown): SalaryRange | null {
+  if (!isNode(node)) return null;
+  const num = (v: unknown) => {
+    const n = Number((text(v) ?? "").replace(/[^0-9.]/g, ""));
+    return Number.isFinite(n) && n > 0 ? n : null;
+  };
+  const min = num(pick(node, "MinValue"));
+  const max = num(pick(node, "MaxValue"));
+  if (min === null && max === null) return null;
+  return {
+    min,
+    max,
+    currency: text(pick(node, "@_currency")) ?? "AUD",
+    period: text(pick(node, "@_period")),
+  };
 }
 
 function sanitizeDescription(html: string): string {

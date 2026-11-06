@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { SPECIALITIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Specialities | Lumiq Talent",
+  title: "AI, Data & Data Centre Recruitment | Lumiq Talent",
   description:
-    "Specialist talent advisory for AI & Machine Learning, Data Centre & Infrastructure, and Data & Analytics.",
+    "Specialist recruitment for AI & machine learning, data centre & infrastructure, and data & analytics roles across Australia.",
   alternates: { canonical: "/specialities" },
 };
 
